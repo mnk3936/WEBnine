@@ -9,19 +9,23 @@
         
 /* ===== Dark Theme Aesthetic ===== */
         :root {
-            --bg: #0d0c0c;
-            --panel: #151514;
-            --text: #fffefe;
-            --accent: #5eead4;  /* Teal for data flow */
-            --keyword: #f472b6;  /* Pink for tech tags */
+            --bg: #10100e;
+            --panel: #10100e;
+            --text: #fefee3;
+            --accent: #fffefe;  /* Teal for data flow */
+            --keyword: #e3ba7d;  /* Pink for tech tags */
             --comment: #64748b;   /* Gray for metadata */
+        }
+        @font-face {
+            font-family: 'Roundo-Light';
+            src: url('Roundo-Light.otf') format('truetype');
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nue Montreal', monospace;
+            font-family: 'Satoshi', sans-serif;
         }
 
         body {
@@ -84,7 +88,7 @@
             top: 0;
             width: 100%;
             padding: 1rem 0;
-            background: rgba(13, 12, 12, 0.9);
+            background: #10100e;
             backdrop-filter: blur(5px);
             z-index: 100;
         }
@@ -282,8 +286,9 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
 </head>
 <body>
     <!-- Navigation -->
@@ -302,10 +307,10 @@
     <section id="hero">
         <div class="container">
             <h1 class="hero-title">Hello There!</h1>
-            <p class="hero-subtitle">Data Scientist | AI Engineer | Machine Learning Specialist</p>
-            <p>Building intelligent systems with Python, TensorFlow, and LLMs. Currently Working at Zakysoft Technologies   .</p>
+            <p class="hero-subtitle">Data Scientist | AI Engineer | AI-powered System Architecture</p>
+            <p>Building intelligent systems with Python, Langchain, and LLMs. Currently Working at Zakysoft Technologies   .</p>
             <div class="typewriter">
-                <span>$ cat about_me.txt</span>
+                <span>$ cool stuff_i_do.txt</span>
                 <span class="typewriter-cursor"></span>
             </div>
         </div>
@@ -314,7 +319,19 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2>featured_projects</h2>
+            <h2>Featured Projects </h2>
+
+            <div class="project-card">
+                <h3>Rag Powered AI-Assistant</h3>
+                <div class="project-stack">
+                    <span class="tech-tag">Flask API</span>
+                    <span class="tech-tag">Transformers</span>
+                    <span class="tech-tag">Faiss</span>
+                    <span class="tech-tag">Nomic Embed text</span>
+                </div>
+                <p>Made an AI-Assistant for a company where it uses rag powered architecture to retrieve data and provide accurate results.</p>
+                <a href="https://github.com/mnk3936/Driver-Distraction-Detection/blob/main/README.md" class="project-link">View project details</a>
+            </div>
             
             <div class="project-card">
                 <h3>Distracted Driver Detection</h3>
@@ -356,7 +373,7 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2>technical_stack</h2>
+            <h2>Technical Stack </h2>
             
             <div class="skills-grid">
                 <div class="skill-category">
@@ -396,7 +413,7 @@
     <section id="contact">
         <div class="container">
             <h2>connect</h2>
-            <p>For collaborations or opportunities:</p>
+            <p>In case you want to stay in touch:</p>
             <p>
                 <a href="mailto:nadeemkariyad1@gmail.com" class="contact-email">nadeemkariyad1@gmail.com</a>
             </p>
@@ -432,10 +449,10 @@
             const currentPhrase = phrases[phraseIndex];
             
             if (isDeleting) {
-                typewriterEl.textContent = '$ cat about_me.txt // ' + currentPhrase.substring(0, charIndex - 1);
+                typewriterEl.textContent = '$ cool stuff_i_do.txt // ' + currentPhrase.substring(0, charIndex - 1);
                 charIndex--;
             } else {
-                typewriterEl.textContent = '$ cat about_me.txt // ' + currentPhrase.substring(0, charIndex + 1);
+                typewriterEl.textContent = '$ cool stuff_i_do.txt // ' + currentPhrase.substring(0, charIndex + 1);
                 charIndex++;
             }
             
@@ -468,9 +485,9 @@
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.style.background = 'rgba(13, 12, 12, 0.98)';
+                nav.style.background = 'rgba(16, 16, 14, 0.98)';
             } else {
-                nav.style.background = 'rgba(13, 12, 12, 0.9)';
+                nav.style.background = 'rgba(16, 14, 14, 0.9)';
             }
         });
     </script>
