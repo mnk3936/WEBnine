@@ -271,20 +271,47 @@
             color: var(--accent);
         }
 
-        /* ===== Responsive ===== */
+        /* EXISTING STYLES */
+        .nav-links {
+            display: flex;
+            gap: 1em;
+        }
+        .hamburger {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        /* CUSTOMIZE THE BREAKPOINT IF NEEDED */
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
             }
-            
+
             .skills-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .nav-links {
-                gap: 1rem;
+                /* Hide nav links on mobile, unless active */
+                display: none;
+                position: absolute;
+                right: 1em;
+                top: 60px; /* Adjust based on nav height */
+                background: #fff;
+                flex-direction: column;
+                width: 200px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
             }
         }
+
+
     </style>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -293,14 +320,17 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="container nav-container">
-            <div class="logo">nadeem muhammed</div>
-            <div class="nav-links">
-                <a href="#projects">projects</a>
-                <a href="#skills">skills</a>
-                <a href="#contact">contact</a>
-            </div>
+    <div class="container nav-container">
+        <div class="logo">nadeem muhammed</div>
+        <div class="nav-links" id="navLinks">
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
         </div>
+        <div class="hamburger" onclick="toggleMenu()">
+        &#9776;
+        </div>
+    </div>
     </nav>
 
     <!-- Hero Section -->
@@ -466,6 +496,9 @@
             } else {
                 setTimeout(type, isDeleting ? 50 : 100);
             }
+        }
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
         }
 
         // Start animation
