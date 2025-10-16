@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smooth Scroll Gradient Background</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      height: 400vh; /* 4 sections */
+      transition: background 0.2s linear;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <section>Section 1</section>
+  <section>Section 2</section>
+  <section>Section 3</section>
+  <section>Section 4</section>
+
+  <script>
+    // Gradient color pairs for each section
+    const gradients = [
+      ["#ff7e5f", "#feb47b"], // section 1
+      ["#6a11cb", "#2575fc"], // section 2
+      ["#11998e", "#38ef7d"], // section 3
+      ["#fc5c7d", "#6a82fb"]  // section 4
+    ];
+
+    function lerp(a, b, t) {
+      return a + (b - a) * t;
+    }
+
+    function hexToRgb(hex) {
+      const bigint = parseInt(hex.slice(1), 16);
+      return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
+    }
+
+    function rgbToHex(r, g, b) {
+      return (
+        "#" +
+        [r, g, b]
+          .map(x => {
+            const hex = Math.round(x).toString(16);
+            return hex.length === 1 ? "0" + hex : hex;
+          })
+          .join("")
+      );
+    }
+
+    function interpolateGradient(grad1, grad2, t) {
+      const c1a = hexToRgb(grad1[0]);
+      const c1b = hexToRgb(grad1[1]);
+      const c2a = hexToRgb(grad2[0]);
+      const c2b = hexToRgb(grad2[1]);
+
+      const color1 = rgbToHex(
+        lerp(c1a[0], c2a[0], t),
+        lerp(c1a[1], c2a[1], t),
+        lerp(c1a[2], c2a[2], t)
+      );
+
+      const color2 = rgbToHex(
+        lerp(c1b[0], c2b[0], t),
+        lerp(c1b[1], c2b[1], t),
+        lerp(c1b[2], c2b[2], t)
+      );
+
+      return `linear-gradient(135deg, ${color1}, ${color2})`;
+    }
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const sectionHeight = window.innerHeight;
+      const totalSections = gradients.length;
+
+      const index = Math.floor(scrollTop / sectionHeight);
+      const nextIndex = Math.min(index + 1, totalSections - 1);
+      const progress = (scrollTop % sectionHeight) / sectionHeight;
+
+      const newGradient = interpolateGradient(
+        gradients[index],
+        gradients[nextIndex],
+        progress
+      );
+
+      document.body.style.background = newGradient;
+    });
+  </script>
+</body>
+</html>

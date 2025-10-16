@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadeem Muhammed - Seamless Systems | AI Consultancy</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="style" href="style.css">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <!-- Critical CSS inlined -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:Arial,sans-serif;line-height:1.6;color:#333;overflow-x:hidden}
+        .sidebar{position:fixed;left:0;top:0;height:100vh;width:200px;background:rgba(10,31,15,0.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:1000;display:flex;flex-direction:column;padding:40px 0}
+        .main-content{margin-left:200px}
+    </style>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Vertical Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="logo-section">
+            <div class="logo">NADEEM<br>MUHAMMED</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="LinkedIn">LI</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Toggle Button -->
+    <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Make <span class="highlight">AI</span> work for you</h1>
+                    <button class="cta-button">REQUEST A CONSULTATION</button>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&q=80" 
+                             alt="Professional portrait" 
+                             width="450" 
+                             height="600"
+                             fetchpriority="high">
+                        <div class="asterisk">*</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img data-src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&q=80" 
+                         alt="Nadeem Muhammed" 
+                         class="lazy"
+                         width="400"
+                         height="500">
+                </div>
+                <div class="about-content">
+                    <h2>Custom Software Solutions? <em>Count on me.</em></h2>
+                    <p>Company's background, history, mission, vision, or philosophy. Anything that will introduce your brand's persona to your clients. This will help build a connection between you and them, that hopefully leads into a working relationship.</p>
+                </div>
+            </div>
+            <div class="mission-statement">
+                <div class="container">
+                    <h2>At Seamless Systems, we are shaping a world where innovation flows naturally and connections happen effortlessly.</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Feedback Section -->
+        <section id="clients" class="clients">
+            <div class="container">
+                <h2>Client Feedback</h2>
+                <div class="testimonials">
+                    <div class="testimonial-item">
+                        <h3>Global Solutions</h3>
+                        <p>Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <h3>Agile Technology</h3>
+                        <p>Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <h3>Innovation Labs</h3>
+                        <p>Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="client-promise lazy-bg" data-bg="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&q=80">
+                <div class="promise-overlay">
+                    <h2>Client-first thinking, future-forward technology. We are here to explore new possibilities.</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>What "I" Can Do For You</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img data-src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&q=75" 
+                                 alt="Mobile App Development" 
+                                 class="lazy"
+                                 width="400"
+                                 height="250">
+                        </div>
+                        <div class="service-content">
+                            <h3>Mobile App Development</h3>
+                            <p>Give a detailed description of the service being provided here.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img data-src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format&q=75" 
+                                 alt="Web App Development" 
+                                 class="lazy"
+                                 width="400"
+                                 height="250">
+                        </div>
+                        <div class="service-content">
+                            <h3>Web App Development</h3>
+                            <p>Give a detailed description of the service being provided here.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img data-src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format&q=75" 
+                                 alt="Internal App Development" 
+                                 class="lazy"
+                                 width="400"
+                                 height="250">
+                        </div>
+                        <div class="service-content">
+                            <h3>Internal App Development</h3>
+                            <p>Give a detailed description of the service being provided here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Us Section -->
+            <div class="why-us">
+                <div class="container">
+                    <h2>Why Us</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="20,70 40,50 60,60 80,30" stroke="currentColor" stroke-width="4" fill="none"/>
+                                    <rect x="20" y="75" width="10" height="15" fill="currentColor"/>
+                                    <rect x="42" y="60" width="10" height="30" fill="currentColor"/>
+                                    <rect x="64" y="50" width="10" height="40" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <h3>Bespoke Solutions</h3>
+                            <p>Support your header with a short one liner.</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="35" r="8" fill="currentColor"/>
+                                    <circle cx="30" cy="55" r="5" fill="currentColor"/>
+                                    <circle cx="70" cy="55" r="5" fill="currentColor"/>
+                                    <circle cx="50" cy="70" r="5" fill="currentColor"/>
+                                    <path d="M50,43 L30,55 M50,43 L70,55 M30,55 L50,70 M70,55 L50,70" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3>Reliable Customer Support</h3>
+                            <p>Support your header with a short one liner.</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="25" y="25" width="50" height="40" stroke="currentColor" stroke-width="4" fill="none"/>
+                                    <rect x="30" y="30" width="40" height="25" fill="currentColor"/>
+                                    <line x1="35" y1="70" x2="65" y2="70" stroke="currentColor" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <h3>Secure Systems</h3>
+                            <p>Support your header with a short one liner.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container contact-container">
+                <div class="contact-content">
+                    <h2>Let us help you</h2>
+                    <p class="contact-subtitle">Reach out for an exploratory conversation.</p>
+                    <button class="cta-button">CONTACT US</button>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>PHONE</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>EMAIL</h3>
+                            <p>hello@reallygreatsite.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>SOCIAL</h3>
+                            <div class="social-links">
+                                <a href="#">Facebook</a>
+                                <a href="#">Instagram</a>
+                                <a href="#">Linkedin</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-image">
+                    <div class="image-wrapper">
+                        <img data-src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&q=80" 
+                             alt="Contact us" 
+                             class="lazy"
+                             width="500"
+                             height="650">
+                        <div class="asterisk">*</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Seamless Systems. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
